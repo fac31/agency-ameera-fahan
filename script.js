@@ -1,0 +1,1 @@
+// Smooth-scroll effect on the navigation bar to the different sections of the page 
