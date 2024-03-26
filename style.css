@@ -1,9 +1,68 @@
 /* Best practices for webpage styling 
-Follow the outline structure for css – use css variables 
+/* Follow the outline structure for css – use css variables */
 
+/* Global settings applied to all elements */
+* {
+  box-sizing: border-box; /* Changes the box model so width and height include padding and border but not the margin */
+  margin: 0; /* Removes the default margin from all elements */
+}
 
-/* Navigation Menu */
-/* Contact Us button at the far right, in a contrasting colour to the other sections  */
+label,input {
+  display: block; /* Makes label and input elements block-level, so they take up the full width available */
+}
+
+/*------------------------------------*\
+  #NAVIGATION-MENU
+\*------------------------------------*/
+
+/**
+ * TO DO: Add logo image css
+ */
+
+nav {
+  padding: 1.5rem; 
+  background-color: #C7D1C7; /* Nav background color set to Ash Grey*/
+  color: #262626; /* Nav font colour set to Eerie Black*/
+}
+
+/* Setting up a flexbox layout */
+.row {
+  display: flex; /* Enables flexbox layout, making child elements flex items */
+  gap: 1rem; /* Space between each flex item */
+  flex-wrap: wrap; /* Allows items to wrap to next line if space runs out */
+  align-items: center; /* Vertically centers items in their line */
+}
+
+/* Ensures nav buttons have distributed space between them */
+.justify-space-between {
+  justify-content: space-between;
+}
+
+ul {
+  list-style:none; /* Removes bullet points from lists */
+}
+
+ul.row li a {
+  display: inline-block; /* Makes the link behave like a block but allows it to sit inline */
+  font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
+  font-weight: bold; /*TBU Font - to be defined upfront - relates to Issue #4*/
+  text-decoration: none; /* Removes underline from links */
+  padding: 14px 20px; /* Adds padding inside the links for clickable area */
+}
+
+ul.row li:not(:last-child) a {
+  color: #262626 /* Sets the text colour for all links except for Contact Us */
+}
+
+ul.row li:last-child a {
+  background-color: #FFE4E1; /* Background color for Contact Us*/
+  color: #FF6663 /* Text colour for Contact Us */
+}
+
+ul.row li a:hover {
+  background-color: #FFE4E1; /* Background color on hover */
+  color: #FF6663; /* Text colour on hover */
+}
 
 
 /* Section 1 – Introduction / About Us
