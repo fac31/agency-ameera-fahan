@@ -25,3 +25,7 @@ Use css Stack to amend the size of the layout of the form */
 
 
 /* Footer  */
+
+.row {
+    display: flex
+}
