@@ -62,48 +62,53 @@
             <!-- [placeholder grid of prior travels] -->
         </section>
 
-        <section id="contact">
+        <section id="contact" class="center width-xl">
             <h2>We Would Love to Hear from You!</h2>
 
             <form id="form">
-                <label for="name">NAME:</label>
-                <input id="name" name="name" type="text" class= "border-style" required/>
+                <div class="form-row">  <!-- Wrap NAME and EMAIL -->
+                    <label for="name">NAME:</label>
+                    <input id="name" name="name" type="text" class= "border-style" required/>
 
-                <label for="email">EMAIL:</label>
-                <input id="email" name="email" type="email" class= "border-style" required/>
-
+                    <label for="email">EMAIL:</label>
+                    <input id="email" name="email" type="email" class= "border-style" required/>
+                </div>
+                
                 <fieldset>
                     <legend>FAVOURITE TRIP STYLES:</legend>
 
-                    <input 
-                        id="trip-nature" 
-                        type="radio"
-                        name="trip"
-                        value="Nature" 
-                        class="border-style"
-                        checked 
-                    />
-                    <label for="trip-nature" class="radio">Nature</label>
+                    <div class="radio-container">
+                        <input id="trip-nature" type="radio" name="trip" value="Nature" class="border-style" checked />
+                        <label for="trip-nature" class="radio">Nature</label>
+                    </div>
 
-                    <input id="trip-history" type="radio" name="trip" value="history" class="border-style"/>
-                    <label for="trip-history" class="radio">History</label>
+                    <div class="radio-container">
+                        <input id="trip-history" type="radio" name="trip" value="history" class="border-style"/>
+                        <label for="trip-history" class="radio">History</label>
+                    </div>
 
-                    <input id="trip-beach" type="radio" name="trip" value="beach" class="border-style"/>
-                    <label for="trip-beach" class="radio">Beach</label>
+                    <div class="radio-container">
+                        <input id="trip-beach" type="radio" name="trip" value="beach" class="border-style"/>
+                        <label for="trip-beach" class="radio">Beach</label>
+                    </div>
 
-                    <input id="trip-city" type="radio" name="trip" value="radio" class="border-style"/>
-                    <label for="trip-city" class="radio">City</label>
+                    <div class="radio-container">
+                        <input id="trip-city" type="radio" name="trip" value="radio" class="border-style"/>
+                        <label for="trip-city" class="radio">City</label>
+                    </div>
                 </fieldset>
 
                 <label for="message">MESSAGE:</label>
-                <textarea class="border-style" name="message"></textarea>
+                <textarea id="message" class="border-style" name="message"></textarea>
 
-                <input id="marketingConsent" name="marketingConsent" type="checkbox" class="border-style" required/>
-                <label for="marketingConsent" class="checkbox">I agree to receive personalised communication from Invisible Strings Travel by email.</label>
+                <div class="checkbox-wrapper">
+                    <input id="marketingConsent" name="marketingConsent" type="checkbox" class="border-style" required/>
+                    <label for="marketingConsent" class="checkbox">I agree to receive communication from Invisible Strings Travel.</label>
+                </div>
+                
                 <button class="border-style" type="submit">SEND</button>
             </form>
         </section>
-
     </main>
     
     <footer>
