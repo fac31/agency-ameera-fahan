@@ -84,7 +84,43 @@ Use CSS Grid to style children in two-direction layout */
   #CONTACT
 \*------------------------------------*/
 
+.border-style {
+  border: 2px solid #FFE4E1; /* Sets the border color */
+}
 
+.border-style:focus{
+  outline: none; /* Removes the default focus outline */
+  border-color: #FF6663; /* Changes the border color on focus for better visibility */
+}
+
+
+.contact {
+
+}
+
+fieldset {
+
+}
+
+input {
+
+}
+
+textarea {
+  display:block;
+}
+
+
+
+button {
+  
+  transition: background-color 0.3s; /* Smooth transition for background color on hover */
+}
+
+button:hover {
+  background-color: #FFE4E1;
+  color: #FF6663; 
+}
 
 
 /*------------------------------------*\
