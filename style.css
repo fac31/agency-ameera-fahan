@@ -69,7 +69,77 @@ ul.row li a:hover {
 Use CSS Flexbox to style children in a single-direction layout 
 Block Quote + Citation 
 Inside a box with a nice background picture  */
-	
+
+
+
+
+/*------------------------------------*\
+  #ABOUT US SECTION
+\*------------------------------------*/
+
+
+.flex-item {
+    width: 48%;   /* width of those with class flex-item will be 48% of the container */
+    margin-left: 20px; /* space between the left side of the parent container and child element */
+    margin-top: 10px;
+
+}
+
+img {
+    padding: 20px; /* space between the image and the right side of the parent container */
+    width: 48%;  /* width of image will be 48% of the container */
+}
+
+.MT-quote {
+    margin-top: 20px;
+    padding-left: 16px;
+    color: #262626 ;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+#about {
+    background-color: #C7D1C7;
+    
+}
+
+section p {
+    font-size: 16px;
+    line-height: 150%;
+    color: #262626;
+
+}
+
+
+h2.about-us {
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+/* body {
+    background-color: #C7D1C7;
+} */
+
+
+/* constraining the width of the webpage */
+
+.center {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .width-sm {
+    max-width: 20rem;
+  }
+
+  .width-lg {
+    max-width: 40rem;
+  }
+  
+  .width-xl {
+          max-width: 60rem;
+        }
 
 /* Section 2 – Meet the Team
 Use CSS Flexbox to style children in a single-direction layout  */
@@ -126,6 +196,7 @@ button:hover {
 /*------------------------------------*\
   #FOOTER
 \*------------------------------------*/
+
 footer {
   display: flex; /* Uses Flexbox for layout */
   flex-direction: column; /* Stacks children vertically */
