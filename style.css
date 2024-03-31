@@ -65,11 +65,27 @@ ul.row li a:hover {
 }
 
 
-/* Section 1 – Introduction / About Us
-Use CSS Flexbox to style children in a single-direction layout 
-Block Quote + Citation 
-Inside a box with a nice background picture  */
+/*------------------------------------*\
+  #HEADER SECTION
+\*------------------------------------*/
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 33vh; /* so header takes up two thirds of the viewport*/
+  background-color: #E1E6E1;
+  font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
+}
+
+header h2 { 
+  margin-top: 1cm; 
+  font-weight: bold;
+  padding: 10px 15px; 
+  background-color: #FFE4E1; 
+  color: #FF6663; 
+}
 
 
 
