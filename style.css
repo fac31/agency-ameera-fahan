@@ -79,8 +79,15 @@ header {
   font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
 }
 
+header h1 { 
+  font-weight: bold;
+  padding: 10px 15px; 
+  background-color: #FF6663; 
+  color: #FFE4E1; 
+}
+
 header h2 { 
-  margin-top: 1cm; 
+  margin-top: 0.5cm; 
   font-weight: bold;
   padding: 10px 15px; 
   background-color: #FFE4E1; 
