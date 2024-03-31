@@ -141,9 +141,32 @@ h2.about-us {
           max-width: 60rem;
         }
 
-/* Section 2 – Meet the Team
-Use CSS Flexbox to style children in a single-direction layout  */
- 
+/*------------------------------------*\
+  #MEET THE TEAM
+\*------------------------------------*/
+
+#team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2cm; /* Space below h2 */
+  background-color: #E1E6E1;
+  font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
+}
+
+#team h2 {
+  margin-top: 1cm; 
+  margin-bottom: 1cm; 
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #FFE4E1; 
+  color: #FF6663; 
+}
+
+
+
+
 
 /* Section 3 – Pictures
 Use CSS Grid to style children in two-direction layout */
