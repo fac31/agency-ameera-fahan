@@ -15,14 +15,18 @@ label,input {
   #NAVIGATION-MENU
 \*------------------------------------*/
 
-/**
- * TO DO: Add logo image css
- */
-
 nav {
   padding: 1.5rem; 
   background-color: #C7D1C7; /* Nav background color set to Ash Grey*/
   color: #262626; /* Nav font colour set to Eerie Black*/
+}
+
+nav img {
+  display: block;
+  margin: 0 auto; 
+  padding: 10px 0; 
+  width: 100px; 
+  height: auto; 
 }
 
 /* Setting up a flexbox layout */
