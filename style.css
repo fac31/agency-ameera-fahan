@@ -174,12 +174,72 @@ h2.about-us {
           max-width: 60rem;
         }
 
-/* Section 2 – Meet the Team
-Use CSS Flexbox to style children in a single-direction layout  */
- 
+/*------------------------------------*\
+  #MEET THE TEAM
+\*------------------------------------*/
 
-/* Section 3 – Pictures
-Use CSS Grid to style children in two-direction layout */
+#team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #E1E6E1;
+  font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
+}
+
+#team h2 {
+  margin-top: 1cm; 
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #FFE4E1; 
+  color: #FF6663; 
+}
+
+.founders {
+  display: flex;
+  justify-content: space-between; /* Manages spacing between items */
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 2 rem;
+}
+
+.meet-founder-part {
+  width: calc(50% - 6rem); /* Adjust width for each item */
+  margin: 1rem 3rem; /* Side margins */
+}
+
+.meet-founder-part img {
+  max-width: 100%; 
+  width: 100%; 
+  height: auto; 
+}
+
+.meet-founder-part figcaption {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #FF6663; 
+  color: #FFE4E1; 
+  text-align: center;
+}
+
+.meet-founder-part h3 {
+  color: #262626;
+}
+
+.meet-founder-part p {
+  font-size: 16px;
+  line-height: 150%;
+  color: #262626;
+  margin-bottom: 1rem;
+}
+
+.meet-founder-part h3 + p {
+  margin-top: 2rem; 
+}
+
+
+
 
 
 /*------------------------------------*\
