@@ -15,14 +15,18 @@ label,input {
   #NAVIGATION-MENU
 \*------------------------------------*/
 
-/**
- * TO DO: Add logo image css
- */
-
 nav {
   padding: 1.5rem; 
   background-color: #C7D1C7; /* Nav background color set to Ash Grey*/
   color: #262626; /* Nav font colour set to Eerie Black*/
+}
+
+nav img {
+  display: block;
+  margin: 0 auto; 
+  padding: 10px 0; 
+  width: 100px; 
+  height: auto; 
 }
 
 /* Setting up a flexbox layout */
@@ -65,11 +69,34 @@ ul.row li a:hover {
 }
 
 
-/* Section 1 – Introduction / About Us
-Use CSS Flexbox to style children in a single-direction layout 
-Block Quote + Citation 
-Inside a box with a nice background picture  */
+/*------------------------------------*\
+  #HEADER SECTION
+\*------------------------------------*/
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 33vh; /* so header takes up two thirds of the viewport*/
+  background-color: #E1E6E1;
+  font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
+}
+
+header h1 { 
+  font-weight: bold;
+  padding: 10px 15px; 
+  background-color: #FF6663; 
+  color: #FFE4E1; 
+}
+
+header h2 { 
+  margin-top: 0.5cm; 
+  font-weight: bold;
+  padding: 10px 15px; 
+  background-color: #FFE4E1; 
+  color: #FF6663; 
+}
 
 
 
@@ -85,10 +112,11 @@ Inside a box with a nice background picture  */
 
 }
 
-img {
+.flex-image {
     padding: 20px; /* space between the image and the right side of the parent container */
     width: 48%;  /* width of image will be 48% of the container */
 }
+
 
 .MT-quote {
     margin-top: 20px;
@@ -100,13 +128,16 @@ img {
 
 #about {
     background-color: #C7D1C7;
+
     
 }
 
+/* Might need to update - section p might change css for all the section p in the code  */
 section p {
     font-size: 16px;
     line-height: 150%;
     color: #262626;
+    font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront */
 
 }
 
@@ -114,6 +145,8 @@ section p {
 h2.about-us {
     font-size: 40px;
     margin-left: 20px;
+    font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront */
+    
 }
 
 /* body {
@@ -210,6 +243,59 @@ h2.about-us {
 Use CSS Grid to style children in two-direction layout */
 
 
+/*------------------------------------*\
+  #grid
+\*------------------------------------*/
+
+#travels {
+    background-color: #C7D1C7 ;
+    margin-bottom: 40px;
+    padding-top: 10px;
+}
+
+.travels h2 {
+    text-align: center; 
+    font-family:'proxima-nova', sans-serif; 
+    margin-top: 37.7953px; 
+    margin-bottom: 10px; 
+    padding: 10px 15px; 
+    background-color: #FFE4E1; /* Background color for about us  */
+    color: #FF6663; 
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.image-grid {
+    --gap: 30px;
+    --num-cols: 3;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap)
+
+}
+
+/* anything under 1024px  */
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+
+}
+
+.image-grid > img {
+    width: 100%;
+    height: 100%;
+}
 
 /*------------------------------------*\
   #CONTACT
