@@ -1,7 +1,7 @@
-/* Best practices for webpage styling 
-/* Follow the outline structure for css – use css variables */
+/*------------------------------------*\
+  #GLOBAL-STYLING
+\*------------------------------------*/
 
-/* Global settings applied to all elements */
 * {
   box-sizing: border-box; /* Changes the box model so width and height include padding and border but not the margin */
   margin: 0; /* Removes the default margin from all elements */
@@ -10,6 +10,32 @@
 label,input {
   display: block; /* Makes label and input elements block-level, so they take up the full width available */
 }
+
+body {
+    background-color:#E1E6E1;
+
+}
+
+
+/* constraining the width of the webpage */
+
+.center {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .width-sm {
+    max-width: 20rem;
+  }
+
+  .width-lg {
+    max-width: 40rem;
+  }
+  
+  .width-xl {
+          max-width: 60rem;
+        }
 
 /*------------------------------------*\
   #NAVIGATION-MENU
@@ -68,7 +94,6 @@ ul.row li a:hover {
   color: #FF6663; /* Text colour on hover */
 }
 
-
 /*------------------------------------*\
   #HEADER SECTION
 \*------------------------------------*/
@@ -98,11 +123,26 @@ header h2 {
   color: #FF6663; 
 }
 
-
-
 /*------------------------------------*\
   #ABOUT US SECTION
 \*------------------------------------*/
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E1E6E1;
+    font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
+  }
+
+#about h2 { 
+    margin-top: 1cm; 
+    font-weight: bold;
+    padding: 10px 15px; 
+    background-color: #FFE4E1; 
+    color: #FF6663; 
+  }
 
 
 .flex-item {
@@ -118,12 +158,20 @@ header h2 {
 }
 
 
-.MT-quote {
+.margin {
+    margin: 1rem  1rem;
+}
+
+
+.quote {
     margin-top: 20px;
-    padding-left: 16px;
-    color: #262626 ;
+    padding: 40px 20px;
+    color:#FFE4E1 ;
     font-style: italic;
-    padding-bottom: 20px;
+    background-color:#FF6663;
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 20px;
 }
 
 #about {
@@ -141,39 +189,6 @@ section p {
 
 }
 
-
-h2.about-us {
-    font-size: 40px;
-    margin-left: 20px;
-    font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront */
-    
-}
-
-/* body {
-    background-color: #C7D1C7;
-} */
-
-
-/* constraining the width of the webpage */
-
-.center {
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .width-sm {
-    max-width: 20rem;
-  }
-
-  .width-lg {
-    max-width: 40rem;
-  }
-  
-  .width-xl {
-          max-width: 60rem;
-        }
-
 /*------------------------------------*\
   #MEET THE TEAM
 \*------------------------------------*/
@@ -183,7 +198,7 @@ h2.about-us {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #E1E6E1;
+  background-color:#C7D1C7;
   font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
 }
 
@@ -200,12 +215,11 @@ h2.about-us {
   justify-content: space-between; /* Manages spacing between items */
   flex-wrap: wrap;
   width: 100%;
-  padding: 0 2 rem;
 }
 
 .meet-founder-part {
   width: calc(50% - 6rem); /* Adjust width for each item */
-  margin: 1rem 3rem; /* Side margins */
+  margin: 1rem 2rem; /* Side margins */
 }
 
 .meet-founder-part img {
@@ -238,34 +252,30 @@ h2.about-us {
   margin-top: 2rem; 
 }
 
-
-
-
-
+#team blockquote {
+    width: 100%;
+}
 /*------------------------------------*\
-  #grid
+  #GRID 
 \*------------------------------------*/
 
-#travels {
-    background-color: #C7D1C7 ;
-    margin-bottom: 40px;
-    padding-top: 10px;
-}
-
-.travels h2 {
-    text-align: center; 
+  #travels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color:#C7D1C7;
     font-family:'proxima-nova', sans-serif; 
-    margin-top: 37.7953px; 
-    margin-bottom: 10px; 
+  }
+  
+  #travels h2 {
+    margin-top: 1cm; 
+    margin-bottom: 1cm; 
+    font-weight: bold;
     padding: 10px 15px; 
-    background-color: #FFE4E1; /* Background color for about us  */
+    background-color: #FFE4E1;
     color: #FF6663; 
-    width: 35%;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
+  }
 
 .image-grid {
     --gap: 30px;
@@ -318,7 +328,6 @@ h2.about-us {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 2cm; /* Space below h2 */
   background-color: #E1E6E1;
   font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
 }
