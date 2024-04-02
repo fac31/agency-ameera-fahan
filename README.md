@@ -15,10 +15,10 @@ Our chosen theme is to create a website for a travel agency called Invisible Str
 
 ## QuickStart
 - The structure is three separate files for the HTML, CSS and JavaScript code which make up the main branch
-- Please pull all files together when creating a separate branch 
+- Please pull all files together when creating a separate branch
 
 ## Table of Contents
-The project is structured following the below distinct sections. Please raise issues either targeting specific topics (e.g. accessibility) or targeting specific sections (e.g. team-section)
+The project is structured following the below distinct sections. Please raise issues either targeting specific topics (e.g. accessibility, media queries, global formatting) or targeting specific sections (e.g. team-section)
 - Navigation Menu
 - Header
 - Intro / About Us
