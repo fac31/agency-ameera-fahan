@@ -12,10 +12,17 @@ label,input {
 }
 
 body {
-    background-color:#E1E6E1;
+    background-color: var(--Ash-grey);
 
 }
 
+:root {
+  --eerie-black:  #262626; /* Sets the text colour to eerie black */
+  --Ash-grey: #E1E6E1; /* Sets colout to Ash gey */
+  --dark-pink: #FF6663; 
+  --light-pink: #FFE4E1;
+  --dark-grey: #C7D1C7;
+}
 
 /* constraining the width of the webpage */
 
@@ -43,8 +50,8 @@ body {
 
 nav {
   padding: 1.5rem; 
-  background-color: #C7D1C7; /* Nav background color set to Ash Grey*/
-  color: #262626; /* Nav font colour set to Eerie Black*/
+  background-color: var(--dark-grey); /* Nav background color set to Ash Grey*/
+  color: var(--eerie-black); /* Nav font colour set to Eerie Black*/
 }
 
 nav img {
@@ -89,13 +96,13 @@ ul.row li:not(:last-child) a {
 }
 
 ul.row li:last-child a {
-  background-color: #FFE4E1; /* Background color for Contact Us*/
-  color: #FF6663 /* Text colour for Contact Us */
+  background-color: var(--light-pink); /* Background color for Contact Us*/
+  color: var(--dark-pink) /* Text colour for Contact Us */
 }
 
 ul.row li a:hover {
-  background-color: #FFE4E1; /* Background color on hover */
-  color: #FF6663; /* Text colour on hover */
+  background-color: var(--light-pink); /* Background color on hover */
+  color: var(--dark-pink); /* Text colour on hover */
 }
 
 /*------------------------------------*\
@@ -108,23 +115,23 @@ header {
   align-items: center;
   justify-content: center;
   height: 33vh; /* so header takes up two thirds of the viewport*/
-  background-color: #E1E6E1;
+  background-color: var(--Ash-grey);
   font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
 }
 
 header h1 { 
   font-weight: bold;
   padding: 10px 15px; 
-  background-color: #FF6663; 
-  color: #FFE4E1; 
+  background-color: var(--dark-pink); 
+  color: var(--light-pink); 
 }
 
 header h2 { 
   margin-top: 0.5cm; 
   font-weight: bold;
   padding: 10px 15px; 
-  background-color: #FFE4E1; 
-  color: #FF6663; 
+  background-color: var(--light-pink); 
+  color: var(--dark-pink); 
 }
 
 /*------------------------------------*\
@@ -136,7 +143,7 @@ header h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #E1E6E1;
+    background-color: var(--Ash-grey);
     font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
   }
 
@@ -144,8 +151,8 @@ header h2 {
     margin-top: 1cm; 
     font-weight: bold;
     padding: 10px 15px; 
-    background-color: #FFE4E1; 
-    color: #FF6663; 
+    background-color: var(--light-pink); 
+    color: var(--dark-pink); 
   }
 
 
@@ -171,16 +178,16 @@ header h2 {
 .quote {
     margin-top: 20px;
     padding: 40px 20px;
-    color:#FFE4E1 ;
+    color: var(--light-pink) ;
     font-style: italic;
-    background-color:#FF6663;
+    background-color: var(--dark-pink);
     text-align: center; 
     font-weight: bold; 
     font-size: 20px;
 }
 
 #about {
-    background-color: #C7D1C7;
+    background-color: var(--dark-grey);
 
     
 }
@@ -203,7 +210,7 @@ section p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color:#C7D1C7;
+  background-color:var(--dark-grey);
   font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
 }
 
@@ -211,8 +218,8 @@ section p {
   margin-top: 1cm; 
   font-weight: bold;
   padding: 10px 15px;
-  background-color: #FFE4E1; 
-  color: #FF6663; 
+  background-color: var(--light-pink); 
+  color: var(--dark-pink); 
 }
 
 .founders {
@@ -237,19 +244,19 @@ section p {
   margin-bottom: 2rem;
   font-weight: bold;
   padding: 10px 15px;
-  background-color: #FF6663; 
-  color: #FFE4E1; 
+  background-color: var(--dark-pink); 
+  color: var(--light-pink); 
   text-align: center;
 }
 
 .meet-founder-part h3 {
-  color: #262626;
+  color: var(--eerie-black);
 }
 
 .meet-founder-part p {
   font-size: 16px;
   line-height: 150%;
-  color: #262626;
+  color: var(--eerie-black);
   margin-bottom: 1rem;
 }
 
@@ -269,7 +276,7 @@ section p {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color:#C7D1C7;
+    background-color: var(--dark-grey);
     font-family:'proxima-nova', sans-serif; 
   }
   
@@ -278,8 +285,8 @@ section p {
     margin-bottom: 1cm; 
     font-weight: bold;
     padding: 10px 15px; 
-    background-color: #FFE4E1;
-    color: #FF6663; 
+    background-color: var(--light-pink);
+    color: var(--dark-pink); 
   }
 
 .image-grid {
@@ -304,14 +311,14 @@ section p {
 \*------------------------------------*/
 
 .border-style {
-  border: 2px solid #FFE4E1; /* Sets the border color */
+  border: 2px solid var(--Ash-grey); /* Sets the border color */
   padding: 8px;
   margin-bottom: 10px;
 }
 
 .border-style:focus {
   outline: none; /* Removes the default focus outline */
-  border-color: #FF6663; /* Changes the border color on focus for better visibility */
+  border-color: var(--dark-pink);/* Changes the border color on focus for better visibility */
   padding: 8px;
   margin-bottom: 10px;
 }
@@ -321,7 +328,7 @@ section p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #E1E6E1;
+  background-color: var(--Ash-grey);
   font-family:'proxima-nova', sans-serif; /*TBU Font - to be defined upfront - relates to Issue #4*/
 }
 
@@ -330,8 +337,8 @@ section p {
   margin-bottom: 1cm; 
   font-weight: bold;
   padding: 10px 15px; /* Adds padding inside the links for clickable area */
-  background-color: #FFE4E1; /* Background color for Contact Us */
-  color: #FF6663; /* Text colour for Contact Us */
+  background-color: var(--light-pink); /* Background color for Contact Us */
+  color: var(--dark-pink); /* Text colour for Contact Us */
 }
 
 #form {
@@ -366,7 +373,7 @@ section p {
 .form-row label {
   margin-right: 10px;
   margin-bottom: 5px;
-  color:#FF6663;
+  color: var(--dark-pink);
   font-weight: bold;
 }
 
@@ -384,7 +391,7 @@ fieldset {
   flex-direction: row; /*Adjusts items to be in a row */
   justify-content: space-around; /*Spreads items evenly */ 
   flex-wrap: wrap;
-  border: 2px solid #FF6663;
+  border: 2px solid var(--dark-pink);
   padding: 0.5em 1em;
   margin-bottom: 10px;
   min-width: 500px;
@@ -395,7 +402,7 @@ legend {
   width: 100%; /* Ensures legend spans full width */
   padding: 0 10px; 
   margin-bottom: 10px; 
-  color:#FF6663;
+  color: var(--dark-pink);
   font-weight: bold;
 }
 
@@ -419,7 +426,7 @@ label[for="message"]{
   display: block;
   text-align: left;
   width: 100%;
-  color:#FF6663;
+  color:var(--dark-pink);
   font-weight:bold;
   margin-bottom: -5px;
 }
@@ -436,7 +443,7 @@ textarea.border-style {
 button {
   padding-top: 15px;
   padding-bottom: 15px;
-  color:#FF6663;
+  color: var(--dark-pink);
   background-color: #FFE4E1;
   font-size: 1.2em;
   font-weight: bold;
@@ -446,8 +453,8 @@ button {
 }
 
 button:hover {
-  background-color: #FF6663;
-  color: #FFE4E1; 
+  background-color: var(--dark-pink);
+  color: var(--light-pink); 
   font-weight: bold;
 
 }
@@ -466,8 +473,8 @@ footer {
   padding: 20px;
   text-align: left; /* Aligns text to the left */
   font-family:'proxima-nova', sans-serif; /* Font style - to be moved up so it is applied to full document */
-  background-color: #C7D1C7;
-  color: #262626; /* Font colour - to be moved up so it is applied to full document */
+  background-color: var(--dark-grey);
+  color: var(--eerie-black); /* Font colour - to be moved up so it is applied to full document */
 }
 
 footer h3 {
@@ -492,8 +499,8 @@ footer ul li a {
 
 /* Hover state styles for links */
 footer ul li a:hover {
-  background-color: #FFE4E1;
-  color: #FF6663; 
+  background-color: var(--light-pink);
+  color: var(--dark-pink); 
 }
 
 footer p {
@@ -502,7 +509,7 @@ footer p {
 }
 
 a, a:visited {
-  color: #262626; /* Sets text color for both unvisited and visited links */
+  color: var(--eerie-black); /* Sets text color for both unvisited and visited links */
   text-decoration: none; /* Removes underline from all links */
 }
 
@@ -521,16 +528,16 @@ a, a:visited {
     cursor: pointer;
     padding: 10px;
     margin: 10px;
-    color:#FF6663;
-    background-color: #FFE4E1;
+    color: var(--dark-pink);
+    background-color: var(--light-pink);
     font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
   }
 
   .nav-toggle:hover {
-    background-color: #FF6663;
-    color: #FFE4E1; 
+    background-color: var(--dark-pink);
+    color: var(--light-pink); 
     font-size: 1.2em;
     font-weight: bold;
   }
