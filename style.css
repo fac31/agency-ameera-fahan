@@ -51,7 +51,7 @@ body {
 nav {
   padding: 1.5rem; 
   background-color: var(--dark-grey); /* Nav background color set to Ash Grey*/
-  color: #262626; /* Nav font colour set to Eerie Black*/
+  color: var(--eerie-black); /* Nav font colour set to Eerie Black*/
 }
 
 nav img {
