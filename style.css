@@ -613,7 +613,7 @@ a, a:visited {
 
   .form-row, fieldset, .checkbox-wrapper {
     flex-direction: column; /* Stacks elements vertically */
-    align-items: flex-start; /* Aligns items to the start, useful for left-aligning in a column layout */
+    align-items: flex-start; /* Aligns items to the start */
     min-width: 0; /* Removes the minimum width constraint */
   }
 
@@ -622,7 +622,7 @@ a, a:visited {
   fieldset,
   textarea.border-style, 
   button.border-style {
-    width: calc(100% - 20px); /* Full width for smaller screens, adjusted for potential padding/margins */
+    width: calc(100% - 20px); /* Full width for smaller screens */
   }
 
   .form-row label, 
