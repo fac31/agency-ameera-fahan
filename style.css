@@ -582,10 +582,40 @@ a, a:visited {
 
  @media (max-width: 768px) {
   #contact h2 {
-    padding: 10px 10px; /* Adjust padding for smaller screens */
-    box-sizing: border-box; /* Ensure padding is included within the element's total width */
-    max-width: calc(100% - 50px); /* Adjust max-width to prevent overflow, considering the adjusted padding */
-    width: auto; /* Optional: Adjust width to auto to ensure it scales with the screen size */
+    padding: 10px 5px; /* Adjusted padding for smaller screens */
+    box-sizing: border-box; 
+    max-width: calc(100% - 20px); /* Adjust max-width to prevent overflow, adjusted for padding */
+    width: auto; /* Adjusts width to auto to ensure it scales with the screen size */
+  }
+
+  .form-row, fieldset, .checkbox-wrapper {
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: flex-start; /* Aligns items to the start, useful for left-aligning in a column layout */
+    min-width: 0; /* Removes the minimum width constraint */
+  }
+
+  .form-row input[type="text"],
+  .form-row input[type="email"],
+  fieldset,
+  textarea.border-style, 
+  button.border-style {
+    width: calc(100% - 20px); /* Full width for smaller screens, adjusted for potential padding/margins */
+  }
+
+  .form-row label, 
+  .radio-container label.radio, 
+  label.checkbox, 
+  label[for="message"] {
+    width: auto; /* Adjusts width to content, preventing overflow */
+    text-align: left; /* Ensures labels are left-aligned */
+  }
+
+  input[type="radio"].border-style + label.radio,
+  input[type="checkbox"].border-style {
+    margin: 0; /* Adjusts margin for better alignment */
+  }
+  
+  .radio-container, .checkbox-wrapper {
+    justify-content: flex-start; /* Aligns radio buttons and checkboxes to the start */
   }
 }
-
