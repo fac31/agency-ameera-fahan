@@ -628,7 +628,7 @@ a, a:visited {
   .form-row input[type="email"],
   fieldset,
   textarea.border-style, 
-  button.border-style {
+  button.border-style, {
     width: calc(100% - 20px); /* Full width for smaller screens */
   }
 
@@ -647,6 +647,13 @@ a, a:visited {
   
   .radio-container, .checkbox-wrapper {
     justify-content: flex-start; /* Aligns radio buttons and checkboxes to the start */
+  }
+
+  .checkbox-wrapper {
+    padding: 10px 10px; /* Adjusted padding for smaller screens */
+    box-sizing: border-box; 
+    max-width: calc(100% - 20px); /* Adjust max-width to prevent overflow, adjusted for padding */
+    width: auto; /* Adjusts width to auto to ensure it scales with the screen size */
   }
 
 }
