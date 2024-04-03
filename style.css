@@ -19,7 +19,7 @@ body {
 :root {
   --eerie-black:  #262626; /* Sets the text colour to eerie black */
   --Ash-grey: #E1E6E1; /* Sets colout to Ash gey */
-  --dark-pink: #FF6663; 
+  --dark-pink: #c32f37; 
   --light-pink: #FFE4E1;
   --dark-grey: #C7D1C7;
 }
@@ -472,9 +472,9 @@ footer {
   gap: 10px; /* Adds vertical space between children */
   padding: 20px;
   text-align: left; /* Aligns text to the left */
-  font-family:'proxima-nova', sans-serif; /* Font style - to be moved up so it is applied to full document */
+  font-family:'proxima-nova', sans-serif; 
   background-color: var(--dark-grey);
-  color: var(--eerie-black); /* Font colour - to be moved up so it is applied to full document */
+  color: var(--eerie-black); 
 }
 
 footer h3 {
