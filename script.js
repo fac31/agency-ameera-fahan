@@ -16,3 +16,19 @@ document.querySelectorAll('nav a').forEach(anchor => {
       });
     });
   });
+
+
+// Listen for a click event on the navigation toggle button
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+      // Select the navigation links list
+      var navLinks = document.querySelector('nav.row ul');
+      
+      // Check if the navigation links are currently displayed
+      if (navLinks.style.display === 'block') {
+          // If links are displayed, hide them
+          navLinks.style.display = 'none';
+      } else {
+          // If links are hidden, display them
+          navLinks.style.display = 'block';
+      }
+  });

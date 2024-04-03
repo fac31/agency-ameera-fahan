@@ -55,6 +55,10 @@ nav img {
   height: auto; 
 }
 
+.nav-toggle {
+  display: none;
+}
+
 /* Setting up a flexbox layout */
 .row {
   display: flex; /* Enables flexbox layout, making child elements flex items */
@@ -153,6 +157,7 @@ header h2 {
 }
 
 .flex-image {
+    flex-shrink: 0;
     padding: 20px; /* space between the image and the right side of the parent container */
     width: 48%;  /* width of image will be 48% of the container */
 }
@@ -292,19 +297,7 @@ section p {
 
 }
 
-/* anything under 1024px  */
-@media screen and (max-width: 1024px) {
-    .image-grid {
-        --num-cols: 2;
-        --row-height: 200px;
-    }
 
-}
-
-.image-grid > img {
-    width: 100%;
-    height: 100%;
-}
 
 /*------------------------------------*\
   #CONTACT
@@ -511,4 +504,141 @@ footer p {
 a, a:visited {
   color: #262626; /* Sets text color for both unvisited and visited links */
   text-decoration: none; /* Removes underline from all links */
+}
+
+
+/*------------------------------------*\
+  #MEDIA-QUERIES
+\*------------------------------------*/
+
+/**
+* Navigation-Menu
+ */
+
+ @media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Show the toggle button on smaller screens */
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    color:#FF6663;
+    background-color: #FFE4E1;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .nav-toggle:hover {
+    background-color: #FF6663;
+    color: #FFE4E1; 
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+
+/**
+* Header-Section
+ */
+
+@media (max-width: 600px) {
+  header {
+    height: auto; /* Makes the height more flexible */
+    padding: 20px 10px; /* Increases padding for smaller screens */
+  }
+
+  header h1, header h2 {
+    padding: 8px 10px; /* Adjusts padding for smaller screens */
+    text-align: center; /* Ensures text is centered */
+  }
+}
+
+/**
+* About-Us
+ */
+
+ @media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack flex items vertically */
+    margin: 0.5rem; /* Reduce the overall margin of the container if necessary */
+  }
+
+  .flex-item, .flex-image {
+    width: 90%; /* Increase width to use more of the screen's space */
+    margin: 0.5rem auto; /* Center items and provide some vertical spacing */
+  }
+}
+
+/**
+* Meet-the-Team
+ */
+
+ @media (max-width: 768px) {
+  .meet-founder-part {
+    width: calc(100% - 4rem); /* Takes up nearly the full width, allowing for some margin */
+    margin: 1rem 2rem; /* Adjusts margin for smaller screens */
+  }
+}
+
+
+ /**
+* Photo-Grid
+ */
+
+/* anything under 1024px  */
+@media screen and (max-width: 600px) {
+  .image-grid {
+      --num-cols: 2;
+      --row-height: 200px;
+  }
+
+}
+
+.image-grid > img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/**
+* Contact-Us
+ */
+
+ @media (max-width: 768px) {
+  #contact h2 {
+    padding: 10px 5px; /* Adjusted padding for smaller screens */
+    box-sizing: border-box; 
+    max-width: calc(100% - 20px); /* Adjust max-width to prevent overflow, adjusted for padding */
+    width: auto; /* Adjusts width to auto to ensure it scales with the screen size */
+  }
+
+  .form-row, fieldset, .checkbox-wrapper {
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: flex-start; /* Aligns items to the start */
+    min-width: 0; /* Removes the minimum width constraint */
+  }
+
+  .form-row input[type="text"],
+  .form-row input[type="email"],
+  fieldset,
+  textarea.border-style, 
+  button.border-style {
+    width: calc(100% - 20px); /* Full width for smaller screens */
+  }
+
+  .form-row label, 
+  .radio-container label.radio, 
+  label.checkbox, 
+  label[for="message"] {
+    width: auto; /* Adjusts width to content, preventing overflow */
+    text-align: left; /* Ensures labels are left-aligned */
+  }
+
+  input[type="radio"].border-style + label.radio,
+  input[type="checkbox"].border-style {
+    margin: 0; /* Adjusts margin for better alignment */
+  }
+  
+  .radio-container, .checkbox-wrapper {
+    justify-content: flex-start; /* Aligns radio buttons and checkboxes to the start */
+  }
 }
