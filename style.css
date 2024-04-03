@@ -55,6 +55,10 @@ nav img {
   height: auto; 
 }
 
+.nav-toggle {
+  display: none;
+}
+
 /* Setting up a flexbox layout */
 .row {
   display: flex; /* Enables flexbox layout, making child elements flex items */
@@ -511,7 +515,26 @@ a, a:visited {
 * Navigation-Menu
  */
 
+ @media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Show the toggle button on smaller screens */
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    color:#FF6663;
+    background-color: #FFE4E1;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
+  .nav-toggle:hover {
+    background-color: #FF6663;
+    color: #FFE4E1; 
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
 
 /**
 * Header-Section
