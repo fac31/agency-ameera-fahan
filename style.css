@@ -153,6 +153,7 @@ header h2 {
 }
 
 .flex-image {
+    flex-shrink: 0;
     padding: 20px; /* space between the image and the right side of the parent container */
     width: 48%;  /* width of image will be 48% of the container */
 }
@@ -510,29 +511,58 @@ a, a:visited {
 * Navigation-Menu
  */
 
- 
+
 
 /**
 * Header-Section
  */
 
+@media (max-width: 600px) {
+  header {
+    height: auto; /* Makes the height more flexible */
+    padding: 20px 10px; /* Increases padding for smaller screens */
+  }
+
+  header h1, header h2 {
+    padding: 8px 10px; /* Adjusts padding for smaller screens */
+    text-align: center; /* Ensures text is centered */
+  }
+}
+
 /**
 * About-Us
  */
+
+ @media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack flex items vertically */
+    margin: 0.5rem; /* Reduce the overall margin of the container if necessary */
+  }
+
+  .flex-item, .flex-image {
+    width: 90%; /* Increase width to use more of the screen's space */
+    margin: 0.5rem auto; /* Center items and provide some vertical spacing */
+  }
+}
 
 /**
 * Meet-the-Team
  */
 
+ @media (max-width: 768px) {
+  .meet-founder-part {
+    width: calc(100% - 4rem); /* Takes up nearly the full width, allowing for some margin */
+    margin: 1rem 2rem; /* Adjusts margin for smaller screens */
+  }
+}
 
 
  /**
 * Photo-Grid
  */
 
-
 /* anything under 1024px  */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
   .image-grid {
       --num-cols: 2;
       --row-height: 200px;
@@ -550,5 +580,12 @@ a, a:visited {
 * Contact-Us
  */
 
-
+ @media (max-width: 768px) {
+  #contact h2 {
+    padding: 10px 10px; /* Adjust padding for smaller screens */
+    box-sizing: border-box; /* Ensure padding is included within the element's total width */
+    max-width: calc(100% - 50px); /* Adjust max-width to prevent overflow, considering the adjusted padding */
+    width: auto; /* Optional: Adjust width to auto to ensure it scales with the screen size */
+  }
+}
 
